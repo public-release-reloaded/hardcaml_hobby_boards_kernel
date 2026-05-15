@@ -26,7 +26,7 @@ depends: [
   "stdio"
   "dune"         {>= "3.17.0"}
 ]
-available: arch != "arm32" & arch != "x86_32"
+available: arch != "x86_32"
 synopsis: "Support code for FPGA hobby boards."
 description: "
 Interface code for FPGA hobby boards, useful library infrastructure, and build script generation.
