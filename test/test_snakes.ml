@@ -87,7 +87,7 @@ let test_snakes () =
     Circuit.create_exn ~name:"snakes" [ output "set_n" set_n; output "select_n" select_n ]
   in
   let sim = Cyclesim.create ~config:Cyclesim.Config.trace_all circuit in
-  let waves, sim = Waveform.create sim in
+  let waves, sim = Cyclesim.Waveform.create sim in
   let clear = Cyclesim.in_port sim "clear" in
   clear := Bits.vdd;
   Cyclesim.cycle sim;
